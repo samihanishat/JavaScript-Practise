@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script src="JSoC.js"></script>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // Create An Object
+        // const person = {
+        //     firstname: "John",
+        //     lastname: "Doe",
+        //     age:50,
+        //     eyecolor: "blue",
+        //     year: function() {
+        //         return (this.firstname + " " + this.lastname + " is " + this.age + " years old");
+        //     }
+        // };
+        // Add a method
+        // person.name = function() {
+        //     return (this.firstname + " " + this.lastname).toUpperCase();
+        // };
+        // document.getElementById("demo").innerHTML = person.year() ;
+        
+        // let text = "" ;
+        // for(let x in person){
+        //     text += person[x] + " ";
+        // }
+        // document.getElementById("demo").innerHTML = text;
+
+        // const myArray = Object.values(person);
+        // document.getElementById("demo").innerHTML = myArray;
+
+        // JSON.stringify 
+        // document.getElementById("demo").innerHTML = JSON.stringify(person);
+
+        // Constructor function for person object 
+        function Person(first,last,age,eye){
+            this.firstname = first;
+            this.lastname = last;
+            this.age = age;
+            this.eyecolor = eye;
+            this.nationality = "English";
+        }
+        const myFather = new Person("John", "Doe", "45", "blue"); 
+        const myMother = new Person("Marry", "Rally", "42", "black"); 
+        // myFather.hobby = "Writing";
+        // Person.prototype.hobby = "Writing";
+        Person.prototype.changeName = function(name){
+            this.lastname = name;
+        }
+        myFather.changeName = ("SAlly");
+        // document.getElementById("demo").innerHTML = JSON.stringify(myFather);
+        document.getElementById("demo").innerHTML = "My father's hobby is " + myFather.hobby ;
+        document.getElementById("demo").innerHTML = "My father's last name is " + myFather.lastname ;
+        </script>
+</body>
+</html>
