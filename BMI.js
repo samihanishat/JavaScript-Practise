@@ -1,6 +1,6 @@
 let weight = 120;
 let height = 5;
-let BMI = weight / height;
+let BMI = weight / height*height;
 if(BMI < 18.5){
     console.log("You are underweight.");
 }
